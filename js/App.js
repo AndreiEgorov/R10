@@ -6,23 +6,21 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import AboutScreen from "./screens/About"
+import React, { Component } from "react";
+import { StyleSheet, Text, View } from "react-native";
+import AboutScreen from "./screens/About";
 import { ApolloProvider } from "react-apollo";
-import client from "./config/api"
-import RootStackNavigator from './navigation/RootStackNavigation'
-export default class App extends Component{
- 
+import client from "./config/api";
+import RootStackNavigator from "./navigation/RootStackNavigation";
+import { FavesProvider } from "./context/FavesContext";
+export default class App extends Component {
   render() {
-    
     return (
-      
-      <ApolloProvider client = {client}>
-    <RootStackNavigator/> 
-      
+      <ApolloProvider client={client}>
+        <FavesProvider>
+          <RootStackNavigator />
+        </FavesProvider>
       </ApolloProvider>
-      
     );
   }
 }
@@ -30,18 +28,18 @@ export default class App extends Component{
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5FCFF"
   },
   welcome: {
     fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+    textAlign: "center",
+    margin: 10
   },
   instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    textAlign: "center",
+    color: "#333333",
+    marginBottom: 5
+  }
 });

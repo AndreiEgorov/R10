@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import About from "./About";
-import Client from "./../../config/api";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import { Text, View } from "react-native";

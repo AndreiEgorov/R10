@@ -67,11 +67,12 @@ export default createBottomTabNavigator(
           if (routeName === 'Schedule') {
             iconName = `ios-calendar`;
           } else if (routeName === 'Map') {
-            iconName = `layers${focused ? '' : '-outline'}`;
+            iconName = `ios-map`;
           }else if (routeName === 'Faves') {
-            iconName = `ios-options${focused ? '' : '-outline'}`;
+            iconName = `ios-heart`;
           }else if (routeName === 'About') {
-            iconName = `ios-options${focused ? '' : '-outline'}`;
+            iconName = `ios-information-circle`;
+            // iconName = `ios-information-outline${focused ? '' : '-outline'}`;
           }
   
           // You can return any component that you like here! We usually use an

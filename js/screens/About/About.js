@@ -2,7 +2,7 @@
 
 import React from 'react'
 import styles from './styles'
-// const rTenImage = require('./../../assets/r10_logo3x.png') 
+
 
 import {Text, View, ScrollView, Image} from "react-native"
 

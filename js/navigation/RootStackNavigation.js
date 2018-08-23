@@ -5,7 +5,7 @@ import NavigationLayout from "./NavigationLayout"
 
 export default createStackNavigator(
     {
-    NavigationLayout: NavigationLayout,
+    NavigationLayout
 },
 {headerMode: 'none'}
 ) 

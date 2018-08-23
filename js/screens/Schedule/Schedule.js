@@ -1,16 +1,13 @@
 import React, { Component } from "react";
 import { View, Text, SectionList } from "react-native";
-import moment from "moment";
+import SectionLists from './../../components/SectionList'
 
-const Schedule = data => {
-  const sessionsData = data.data
-  console.log("DOBOB", data.data);
+const Schedule = (data) => {
+  // const sessionsData = data.data;
+  console.log("DOBOB", data);
   // const sessions = props.data.allSessions
   return (
-    <View>
-    
-      <Text>Hello </Text>
-    </View>
+    <SectionLists props={data}/>
   );
 };
 
@@ -22,5 +19,20 @@ export default Schedule;
 //   <Text style={{fontWeight: 'bold'}}>{title}</Text>
 // )}
 // sections={data}
+// keyExtractor={(item, index) => item + index}
+// />
+
+
+
+
+
+// <SectionList
+// renderItem={({ item, index }) => (
+//   <Text key={index}>{item.title}</Text>
+// )}
+// renderSectionHeader={({ section: { title } }) => (
+//   <Text style={{ fontWeight: "bold" }}>{title}</Text>
+// )}
+// sections= {data.data} 
 // keyExtractor={(item, index) => item + index}
 // />

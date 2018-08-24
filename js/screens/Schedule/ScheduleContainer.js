@@ -4,14 +4,20 @@ import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import Schedule from "./Schedule";
 import {formatSessionData} from "./FormatSessionData"
+
+
+
+
 export default class ScheduleContainer extends Component {
   render() {
-    console.log('schedule')
+    console.log('MY Props', this.props.navigation)
+  
     return (
       <Query
         query={gql`
           {
             allSessions {
+              id
               startTime
               title
               location
@@ -27,7 +33,8 @@ export default class ScheduleContainer extends Component {
         console.log('data', data)
         {/* const sessions = formatSessionData(data.allSessions) */}
         {/* return formatSessionData(sessions) */}
-        return <Schedule data = {formatSessionData(data.allSessions)}/>
+        console.log("FIRST PROPS",this.props.navigation)
+        return <Schedule data = {formatSessionData(data.allSessions)} navigation={this.props.navigation}/>
       }}
       </Query>
     );

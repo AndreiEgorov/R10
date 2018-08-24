@@ -24,7 +24,7 @@ const SectionLists = ({data, navigation}) => {
           activeOpacity={0.6}
           onPress={()=>{
             console.log("MyItem",item.id),
-            navigation.navigate("Session", {myId: item.id})
+            navigation.navigate("Session", {sessionId: item.id})
           }}
           style={styles.eventContainer}
         >

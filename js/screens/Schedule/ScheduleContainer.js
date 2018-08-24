@@ -8,6 +8,7 @@ import {formatSessionData} from "./FormatSessionData"
 
 
 
+
 export default class ScheduleContainer extends Component {
   render() {
     console.log('MY Props', this.props.navigation)

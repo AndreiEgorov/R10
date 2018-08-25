@@ -15,6 +15,7 @@ class SessionContainer extends Component {
     console.log("IN SESSSION", sessionId);
 
     return (
+        
       <Query
         variables={{ id: sessionId }}
         query={gql`
@@ -24,6 +25,7 @@ class SessionContainer extends Component {
               id
               location
               speaker {
+                id
                 bio
                 image
                 name
@@ -40,7 +42,7 @@ class SessionContainer extends Component {
           if (loading) return <Text>Loading...</Text>;
           if (error) return <Text>Error: </Text>;
 
-          return <Session data={data} />;
+          return <Session data={data} navigation={navigation} />;
         }}
       </Query>
     );

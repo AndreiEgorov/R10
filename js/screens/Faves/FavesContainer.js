@@ -15,6 +15,8 @@ export default class FavesContainer extends Component {
           return <Faves faveIds = {values}/>
         }
       }
+
+      
       </FavesContext.Consumer>
      
     )

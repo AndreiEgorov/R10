@@ -1,21 +1,26 @@
-import {createStackNavigator} from 'react-navigation'
-import About from '../screens/About'
-import Map from '../screens/Map'
-import NavigationLayout from "./NavigationLayout"
+import { createStackNavigator } from "react-navigation";
+import About from "../screens/About";
+import Map from "../screens/Map";
+import SpeakerModal from "./../screens/Speaker";
+import NavigationLayout from "./NavigationLayout";
 
 export default createStackNavigator(
-    {
-    NavigationLayout
-},
-{headerMode: 'none'}
-) 
-
-
-
+  {
+    NavigationLayout,
+    MyModal: {
+      screen: SpeakerModal
+    }
+  },
+  {
+    mode: "modal",
+    headerMode: "none"
+  },
+  { headerMode: "none" }
+);
 
 // About:{
 //     screen:About,
-   
+
 // },
 // Map:{
 //     screen: Map

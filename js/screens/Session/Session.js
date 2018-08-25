@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import { View, Text, Image, TouchableHighlight } from "react-native";
+import { View, Text, Image, TouchableHighlight, TouchableOpacity } from "react-native";
 
-const Session = ({ data, navigation }) => {
-  console.log("SESSION", data);
-  console.log(data.Session.speaker.id);
- 
+const Session = ({ data, navigation, context }) => {
+  // console.log("SESSION", data);
+  // console.log(data.Session.speaker.id);
+  console.log("MY CONTEXT", context.addAFave)
+  
+
   return (
     <View>
       <Text>{data.Session.location}</Text>
@@ -21,6 +23,10 @@ const Session = ({ data, navigation }) => {
           <Text>{data.Session.speaker.name}</Text>
         </View>
       </TouchableHighlight>
+      <TouchableOpacity onPress={()=>{context.addAFave(data.Session.id)}}>
+        {console.log(context)}
+        <Text>Add to Favs</Text>
+      </TouchableOpacity>
     </View>
   );
 };

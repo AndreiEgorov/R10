@@ -36,7 +36,7 @@ export default class SpeakerContainer extends Component {
             if (loading) return <Text>Loading...</Text>;
           if (error) return <Text>Error: </Text>;
 
-            return <Speaker speaker={data}/>
+            return <Speaker data={data}/>
         }}
       </Query>
     );

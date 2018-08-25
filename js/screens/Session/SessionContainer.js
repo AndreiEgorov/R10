@@ -3,6 +3,7 @@ import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import Session from "./Session";
 import { View, Text } from "react-native";
+import FavesContext from "../../context/FavesContext";
 
 class SessionContainer extends Component {
   constructor(props) {
@@ -12,10 +13,9 @@ class SessionContainer extends Component {
   render() {
     const { navigation } = this.props;
     const sessionId = navigation.getParam("sessionId");
-    console.log("IN SESSSION", sessionId);
+    // console.log("IN SESSSION", sessionId);
 
     return (
-        
       <Query
         variables={{ id: sessionId }}
         query={gql`
@@ -41,12 +41,18 @@ class SessionContainer extends Component {
           console.log("MY DATA", data);
           if (loading) return <Text>Loading...</Text>;
           if (error) return <Text>Error: </Text>;
-
-          return <Session data={data} navigation={navigation} />;
+          return (
+            <FavesContext.Consumer>
+              {values => {
+                console.log("MY VALUES", values)
+                return <Session data={data} navigation={navigation} context={values} />;
+              }}
+            </FavesContext.Consumer>
+          );
         }}
       </Query>
     );
-    // return <Session/>
+
   }
 }
 

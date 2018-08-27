@@ -5,11 +5,9 @@ import Session from "./Session";
 import { View, Text } from "react-native";
 import FavesContext from "../../context/FavesContext";
 
+
 class SessionContainer extends Component {
-  
-  // constructor(props) {
-  //   super(props);
-  // }
+ 
   static navigationOptions = {
     title: 'Session',
    

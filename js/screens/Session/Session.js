@@ -58,14 +58,19 @@ const Session = ({ data, navigation, context }) => {
             })
           }
         >
-        {data.Session.speaker ? <View style={styles.speakerInfo}>
-            <Image
-              style={styles.image}
-              source={{ uri: data.Session.speaker.image }}
-            />
-            <Text style={styles.speakerName}>{data.Session.speaker.name}</Text>
-          </View> : <Text/> }
-          
+          {data.Session.speaker ? (
+            <View style={styles.speakerInfo}>
+              <Image
+                style={styles.image}
+                source={{ uri: data.Session.speaker.image }}
+              />
+              <Text style={styles.speakerName}>
+                {data.Session.speaker.name}
+              </Text>
+            </View>
+          ) : (
+            <Text />
+          )}
         </TouchableHighlight>
 
         <TouchableOpacity

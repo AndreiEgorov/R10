@@ -4,34 +4,46 @@ import {
   Text,
   TouchableHighlight,
   View,
-  StyleSheet
+  StyleSheet,
+  Platform
 } from "react-native";
 import moment from "moment";
-import RootStackNavigator from './../navigation/RootStackNavigation'
-import {withNavigation} from "react-navigation"
+import Icon from "react-native-vector-icons/Ionicons";
 
-const SectionLists = ({data, navigation}) => {
+const SectionLists = ({ data, navigation, context }) => {
   //remove showData later
-  console.log("Showing DataDsfsdxw", navigation);
 
-  console.log("BOBOS", data);
+  const allFaves = [];
+  context.favesIds.map(item => allFaves.push(item.id));
+
   return (
-    // <Text>BOBOB</Text>
     <SectionList
       renderItem={({ item, index }) => (
-        
         <TouchableHighlight
           activeOpacity={0.6}
-          onPress={()=>{
-            console.log("MyItem",item.id),
-            navigation.navigate("Session", {sessionId: item.id})
+          onPress={() => {
+            navigation.navigate("Session", { sessionId: item.id });
           }}
           style={styles.eventContainer}
         >
-        
           <View key={index}>
+            {(faved = allFaves.includes(item.id))}
             <Text style={styles.eventName}>{item.title}</Text>
             <Text style={styles.eventLocation}>{item.location}</Text>
+            <View style={styles.favStatus}>
+              {!faved ? (
+                <Text />
+              ) : (
+                <Icon
+                  name={Platform.select({
+                    ios: "ios-heart",
+                    android: "md-heart"
+                  })}
+                  size={20}
+                  color="#cf392a"
+                />
+              )}
+            </View>
           </View>
         </TouchableHighlight>
       )}

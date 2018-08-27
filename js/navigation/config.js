@@ -20,6 +20,13 @@ const GradientHeader = props => (
     headerBackTitle: null,
     header: props => <GradientHeader {...props} />,
     headerStyle: {
-      backgroundColor: 'transparent'
-    }
+      backgroundColor: 'transparent',
+    },
+    headerTintColor: '#fff',
+
+    headerTitleStyle: {
+      fontSize: 20,
+      color:"white",
+      fontFamily: "Montserrat-Light",
+    },
   });

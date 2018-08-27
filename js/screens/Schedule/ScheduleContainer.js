@@ -10,9 +10,15 @@ import {formatSessionData} from "./FormatSessionData"
 
 
 export default class ScheduleContainer extends Component {
+
+
+  static navigationOptions = {
+    title: 'Schedule',
+  }
   render() {
     console.log('MY Props', this.props.navigation)
   
+    
     return (
       <Query
         query={gql`

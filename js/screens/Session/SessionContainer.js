@@ -6,9 +6,20 @@ import { View, Text } from "react-native";
 import FavesContext from "../../context/FavesContext";
 
 class SessionContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
+  
+  // constructor(props) {
+  //   super(props);
+  // }
+  static navigationOptions = {
+    title: 'Session',
+   
+    headerTitleStyle: {
+      fontSize: 20,
+      color:"white",
+      fontFamily: "Montserrat-Light",
+    },
+    headerTintColor: '#fff',
+  };
 
   render() {
     const { navigation } = this.props;
@@ -16,6 +27,7 @@ class SessionContainer extends Component {
     // console.log("IN SESSSION", sessionId);
 
     return (
+  
       <Query
         variables={{ id: sessionId }}
         query={gql`

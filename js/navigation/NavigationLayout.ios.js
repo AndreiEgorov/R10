@@ -9,7 +9,7 @@ import Map from "./../screens/Map";
 import Schedule from "./../screens/Schedule";
 import Faves from "./../screens/Faves";
 import { sharedNavigationOptions } from "./config";
-import Session from "./../screens/Session"
+import Session from "./../screens/Session";
 
 import Ionicons from "react-native-vector-icons/Ionicons"; //for using icons from  react-native-vector-icons
 
@@ -18,10 +18,9 @@ const ScheduleStack = createStackNavigator(
     Schedule: {
       screen: Schedule
     },
-    Session:{
+    Session: {
       screen: Session
     }
-
   },
   {
     navigationOptions: ({ navigation }) => ({

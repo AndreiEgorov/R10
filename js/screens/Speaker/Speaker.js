@@ -12,9 +12,6 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import styles from "./styles";
 import LinearGradient from "react-native-linear-gradient";
 const Speaker = ({ data, navigation }) => {
-  console.log("SPEAKER", navigation);
-  // console.log("SPEAKERRE", data.Speaker.url)
-  console.log("SPEAKERRE", data.Speaker);
   handleClick = () => {
     Linking.canOpenURL(data.Speaker.url).then(supported => {
       if (supported) {

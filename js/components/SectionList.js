@@ -11,8 +11,6 @@ import moment from "moment";
 import Icon from "react-native-vector-icons/Ionicons";
 
 const SectionLists = ({ data, navigation, context }) => {
-  //remove showData later
-
   const allFaves = [];
   context.favesIds.map(item => allFaves.push(item.id));
 
@@ -30,21 +28,21 @@ const SectionLists = ({ data, navigation, context }) => {
             {(faved = allFaves.includes(item.id))}
             <Text style={styles.eventName}>{item.title}</Text>
             <View style={styles.locationAndFav}>
-            <Text style={styles.eventLocation}>{item.location}</Text>
-            <View style={styles.favStatus}>
-              {!faved ? (
-                <Text />
-              ) : (
-                <Icon
-                  name={Platform.select({
-                    ios: "ios-heart",
-                    android: "md-heart"
-                  })}
-                  size={20}
-                  color="#cf392a"
-                />
-              )}
-            </View>
+              <Text style={styles.eventLocation}>{item.location}</Text>
+              <View style={styles.favStatus}>
+                {!faved ? (
+                  <Text />
+                ) : (
+                  <Icon
+                    name={Platform.select({
+                      ios: "ios-heart",
+                      android: "md-heart"
+                    })}
+                    size={20}
+                    color="#cf392a"
+                  />
+                )}
+              </View>
             </View>
           </View>
         </TouchableHighlight>

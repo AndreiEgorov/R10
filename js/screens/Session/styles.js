@@ -16,45 +16,43 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontFamily: "Montserrat-Regular"
   },
-  title:{
+  title: {
     color: "black",
     fontSize: 25,
     fontFamily: "Montserrat-Regular",
-    paddingTop: 15,
-    
+    paddingTop: 15
   },
-  time:{
+  time: {
     color: "#cf392a",
     paddingTop: 15,
     fontFamily: "Montserrat-Regular",
     fontSize: 18
   },
-  description:{
+  description: {
     paddingTop: 15,
     fontFamily: "Montserrat-Light",
     fontSize: 20,
-    lineHeight: 30,
-    
+    lineHeight: 30
   },
-  intro:{
+  intro: {
     paddingTop: 25,
     fontFamily: "Montserrat-Regular",
     fontSize: 17,
-    color:"#999999"
+    color: "#999999"
   },
-  speakerInfo:{
-      display: "flex",
-      flexDirection: "row",
-      paddingVertical: 15,
-      borderBottomColor: "#e6e6e6",
-      borderBottomWidth: 2
-
+  speakerInfo: {
+    display: "flex",
+    flexDirection: "row",
+    paddingVertical: 15,
+    borderBottomColor: "#e6e6e6",
+    borderBottomWidth: 2
   },
-  image:{
-    width: 60, height: 60,
+  image: {
+    width: 60,
+    height: 60,
     borderRadius: 30
   },
-  speakerName:{
+  speakerName: {
     fontSize: 15,
     fontFamily: "Montserrat-Regular",
     alignSelf: "center",
@@ -75,9 +73,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     padding: 15,
     borderRadius: 15
-  },
-
-
+  }
 });
 
 export default styles;

@@ -13,27 +13,19 @@ const realm = new Realm({ schema: [faveSchema] });
 
 export default realm;
 
-
-export const addAFave = id =>{
+export const addAFave = id => {
   realm.write(() => {
     const favedOn = new Date();
-    realm.create("Fave", {id, favedOn})
-  })
-}
-
-
-
+    realm.create("Fave", { id, favedOn });
+  });
+};
 
 export const removeAFave = id => {
   realm.write(() => {
-    const favToDelete = realm.objects("Fave").filtered(`id ==$0`, id)
-    realm.delete(favToDelete)
-  })
-}
-
-
-
-
+    const favToDelete = realm.objects("Fave").filtered(`id ==$0`, id);
+    realm.delete(favToDelete);
+  });
+};
 
 export const getFaves = () => {
   return realm.objects("Fave");

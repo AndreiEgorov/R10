@@ -6,7 +6,7 @@ import { Text, View } from "react-native";
 
 export default class AboutContainer extends Component {
   static navigationOptions = {
-    title: 'About',
+    title: "About"
   };
   render() {
     return (
@@ -24,7 +24,6 @@ export default class AboutContainer extends Component {
         {({ loading, error, data }) => {
           if (loading) return <Text>Loading...</Text>;
           if (error) return <Text>Error :(</Text>;
-          console.log("AbContainer",data);
           return <About data={data} />;
         }}
       </Query>

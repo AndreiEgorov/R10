@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1
   },
   headerTime: {
-    paddingLeft: 5,
+    paddingLeft: 10,
     fontFamily: "Montserrat",
     fontSize: 15,
     paddingVertical: 10,

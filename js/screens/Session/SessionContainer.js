@@ -40,7 +40,7 @@ class SessionContainer extends Component {
                 id
                 bio
                 image
-                name
+               name 
                 url
               }
               startTime

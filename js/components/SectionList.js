@@ -29,6 +29,7 @@ const SectionLists = ({ data, navigation, context }) => {
           <View key={index}>
             {(faved = allFaves.includes(item.id))}
             <Text style={styles.eventName}>{item.title}</Text>
+            <View style={styles.locationAndFav}>
             <Text style={styles.eventLocation}>{item.location}</Text>
             <View style={styles.favStatus}>
               {!faved ? (
@@ -43,6 +44,7 @@ const SectionLists = ({ data, navigation, context }) => {
                   color="#cf392a"
                 />
               )}
+            </View>
             </View>
           </View>
         </TouchableHighlight>
@@ -78,6 +80,12 @@ const styles = StyleSheet.create({
     color: "black",
     fontWeight: "bold",
     fontFamily: "Montserrat-Light"
+  },
+  locationAndFav: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    fontSize: 15
   },
   eventLocation: {
     fontFamily: "Montserrat",

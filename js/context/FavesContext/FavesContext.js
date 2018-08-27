@@ -26,7 +26,9 @@ class FavesProvider extends Component {
   addFaveSession = sessionId => {
     try {
       addAFave(sessionId);
+      console.log("gonna refresh state")
       this.getFavedSessionIds();
+      console.log("refresh state")
     } catch (error) {
       console.log(error);
     }
@@ -35,7 +37,9 @@ class FavesProvider extends Component {
   removeFaveSession = sessionId => {
     try {
       removeAFave(sessionId);
+      console.log("gonna refresh state")
       this.getFavedSessionIds();
+      console.log("refresh state")
     } catch (error) {
       console.log(error);
     }

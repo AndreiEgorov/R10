@@ -99,9 +99,9 @@ export default createBottomTabNavigator(
     }),
     tabBarOptions: {
       activeTintColor: "white",
-      inactiveTintColor: "orange",
+      inactiveTintColor: "#999999",
       labelStyle: {
-        fontSize: 20,
+        fontSize: 12,
         fontFamily: "Montserrat-light"
       },
 

@@ -31,12 +31,14 @@ export default class SpeakerContainer extends Component {
         `}
         variables={{ id: speakerId }}
         >
+        
         {({loading, error, data})=>{
+          {console.log("ANDREI",navigation)}
             console.log("SPEAKERCONTAINER DATA", data)
             if (loading) return <Text>Loading...</Text>;
           if (error) return <Text>Error: </Text>;
-
-            return <Speaker data={data}/>
+            
+            return <Speaker data={data} navigation={navigation}/>
         }}
       </Query>
     );

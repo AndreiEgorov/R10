@@ -23,10 +23,12 @@ class About extends Component {
       <ScrollView>
         <View style={styles.container}>
           <StatusBar barStyle="light-content" />
+         
           <Image
             style={styles.image}
             source={require("./../../assets/r10_logox.png")}
           />
+           <View style={styles.divider}/>
           <Text style={styles.plainText}>
             R10 is a conference that focuses on just about any topic related to
             dev.
@@ -41,6 +43,8 @@ class About extends Component {
           {this.props.data.allConducts.map((object, index) => {
             return <ConductRule object={object} key={index} />;
           })}
+          <View style={styles.divider}/>
+          <Text style={styles.notation}> 	© RED Academy 2018 </Text>
         </View>
       </ScrollView>
     );

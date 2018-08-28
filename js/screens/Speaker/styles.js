@@ -1,23 +1,27 @@
 import { StyleSheet } from "react-native";
+import { auto } from "async";
 const styles = StyleSheet.create({
   screenContainer: {
+    flex: 1,
     backgroundColor: "black"
   },
 
-  titelContainer: {
-    display: "flex",
+  titleContainer: {
     flexDirection: "row",
+
     paddingVertical: 40,
-    color: "white",
-    justifyContent: "center"
+    color: "white"
   },
   icon: {
-    alignSelf: "flex-start"
+    flex: 0.55,
+    marginLeft: 15
   },
   title: {
     color: "white",
     fontSize: 20,
-    fontFamily: "Montserrat-Regular"
+    fontFamily: "Montserrat-Regular",
+    justifyContent: "flex-start",
+    alignSelf: "flex-start"
   },
 
   speakerInfo: {

@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet , Platform } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -17,7 +17,10 @@ const styles = StyleSheet.create({
     fontFamily: "Montserrat-Regular"
   },
   title: {
-    color: "black",
+    color: Platform.select({
+      ios: "black",
+      android:"#999999"
+    }) ,
     fontSize: 25,
     fontFamily: "Montserrat-Regular",
     paddingTop: 15

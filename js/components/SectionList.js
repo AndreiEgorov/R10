@@ -85,7 +85,10 @@ const styles = StyleSheet.create({
   },
   eventName: {
     fontSize: 18,
-    color: "black",
+    color: Platform.select({
+      ios: "black",
+      android:"#999999"
+    }) ,
     fontWeight: "bold",
     fontFamily: "Montserrat-Light"
   },

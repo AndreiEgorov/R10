@@ -26,7 +26,7 @@ const Speaker = ({ data, navigation }) => {
 
   return (
     <View style={styles.screenContainer}>
-      <View style={styles.titelContainer}>
+      <View style={styles.titleContainer}>
         <MaterialIcons
           style={styles.icon}
           name="close"

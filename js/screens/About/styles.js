@@ -6,12 +6,19 @@ const styles = StyleSheet.create({
     paddingRight: 20,
     backgroundColor: "white"
   },
+
+  divider:{
+    borderBottomWidth: 1,
+    borderBottomColor: "#e6e6e6"
+  },
   image: {
     width: 245,
     height: 60,
     alignSelf: "center",
     marginTop: 40,
-    marginBottom: 40
+    marginBottom: 40,
+   
+
   },
 
   headings: {
@@ -30,10 +37,12 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginTop: 20,
     color: "black"
-    // color: "#999999",
-
-    // opacity:0
-    // display: "none"
+  },
+  notation:{
+    paddingVertical: 20,
+    fontSize: 15,
+    color:"black",
+    fontFamily:"Montserrat-Light"
   }
 });
 

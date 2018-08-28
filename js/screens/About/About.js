@@ -4,25 +4,25 @@ import React, {Component} from "react";
 import styles from "./styles";
 
 import { Text, View, ScrollView, Image, StatusBar, TouchableOpacity, Animated, Easing } from "react-native";
-
+import ConductRule from "./../../components/ConductRule"
 class About extends Component{
   constructor(props){
     super(props)
-    this.state={
-      isLoaded: false,
-    }
-    this.showText = this.showText.bind(this)
+    // this.state={
+    //   isLoaded: false,
+    // }
+    // this.showText = this.showText.bind(this)
   }
 
-  showText(){
+  // showText(){
     
-      this.setState({
+  //     this.setState({
 
-        isLoaded : !this.state.isLoaded
-      })
+  //       isLoaded : !this.state.isLoaded
+  //     })
     
   
-  }
+  // }
 
   render(){
     return (
@@ -45,15 +45,9 @@ class About extends Component{
           <Text style={styles.headings}>Code of Conduct</Text>
           {this.props.data.allConducts.map((object, index) => {
             return (
-              <View key={index}>
-              
-              <TouchableOpacity onPress={this.showText}>
-                <Text style={styles.sectionTitle}>{object.title}</Text>
-                </TouchableOpacity>
-                <View style={this.state.isLoaded  ? {display:"flex"} : {display:"none"} }>
-                <Text style={styles.plainText}>{object.description}</Text>
-                </View>
-              </View>
+             
+              <ConductRule object={object}  key={index}/>
+            
             );
           })}
         </View>

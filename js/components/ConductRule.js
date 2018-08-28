@@ -1,33 +1,49 @@
-import react, { Component } from "react";
+import React, { Component } from "react";
+import { View, TouchableOpacity, Text, Animated } from "react-native";
+import styles from "./../screens/About/styles";
 
 class ConductRule extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoaded: false
+      isShown: false,
+      opacity: new Animated.Value(0)
     };
   }
 
-  showText() {
+  _fadeIn() {
+    this.state.opacity.setValue(this.state.isShown ? 1 : 0);
+    Animated.timing(
+      // Animate over time
+      this.state.opacity, // The animated value to drive
+      {
+        toValue: this.state.isShown ? 0 : 1, // Animate to opacity: 1 (opaque)
+        duration: 1000 // Make it take a while
+      }
+    ).start();
+  }
+
+  _press() {
+    this._fadeIn();
     this.setState({
-      isLoaded: !this.state.isLoaded
+      isShown: !this.state.isShown
     });
   }
 
   render() {
     return (
-      <View key={index}>
-        <TouchableOpacity onPress={this.showText.bind(this)}>
-          <Text style={styles.sectionTitle}>{object.title}</Text>
+      <View key={this.props.index}>
+        <TouchableOpacity onPress={() => this._press()}>
+            {this.state.isShown ? <Text style={styles.sectionTitle}>- {this.props.object.title}</Text> : <Text style={styles.sectionTitle}> +  {this.props.object.title}</Text>}
+          
         </TouchableOpacity>
-
-        <View
-          style={
-            this.state.isLoaded ? { display: "flex" } : { display: "none" }
-          }
-        >
-          <Text style={styles.plainText}>{object.description}</Text>
-        </View>
+        {this.state.isShown && (
+          <Animated.View style={{ opacity: this.state.opacity }}>
+            <Text style={styles.plainText}>
+              {this.props.object.description}
+            </Text>
+          </Animated.View>
+        )}
       </View>
     );
   }

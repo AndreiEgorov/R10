@@ -3,7 +3,8 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     paddingLeft: 20,
-    paddingRight: 20
+    paddingRight: 20,
+    backgroundColor: "white"
   },
   image: {
     width: 245,
@@ -28,7 +29,9 @@ const styles = StyleSheet.create({
   plainText: {
     fontSize: 20,
     marginTop: 20,
-    color: "#999999",
+    color: "black"
+    // color: "#999999",
+
     // opacity:0
     // display: "none"
   }

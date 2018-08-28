@@ -28,7 +28,9 @@ const styles = StyleSheet.create({
   plainText: {
     fontSize: 20,
     marginTop: 20,
-    color: "#999999"
+    color: "#999999",
+    // opacity:0
+    // display: "none"
   }
 });
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, TouchableOpacity, Text, Animated } from "react-native";
 import styles from "./../screens/About/styles";
-
+import PropTypes from 'prop-types'
 class ConductRule extends Component {
   constructor(props) {
     super(props);
@@ -34,8 +34,14 @@ class ConductRule extends Component {
     return (
       <View key={this.props.index}>
         <TouchableOpacity onPress={() => this._press()}>
-            {this.state.isShown ? <Text style={styles.sectionTitle}>- {this.props.object.title}</Text> : <Text style={styles.sectionTitle}> +  {this.props.object.title}</Text>}
-          
+          {this.state.isShown ? (
+            <Text style={styles.sectionTitle}>- {this.props.object.title}</Text>
+          ) : (
+            <Text style={styles.sectionTitle}>
+              {" "}
+              + {this.props.object.title}
+            </Text>
+          )}
         </TouchableOpacity>
         {this.state.isShown && (
           <Animated.View style={{ opacity: this.state.opacity }}>
@@ -47,5 +53,13 @@ class ConductRule extends Component {
       </View>
     );
   }
+  
 }
+ConductRule.propTypes= {
+  object: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string
+  })
+}
+
 export default ConductRule;

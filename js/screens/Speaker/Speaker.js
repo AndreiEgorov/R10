@@ -11,6 +11,8 @@ import {
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import styles from "./styles";
 import LinearGradient from "react-native-linear-gradient";
+import PropTypes from "prop-types"
+
 const Speaker = ({ data, navigation }) => {
   handleClick = () => {
     Linking.canOpenURL(data.Speaker.url).then(supported => {
@@ -58,4 +60,11 @@ const Speaker = ({ data, navigation }) => {
     </View>
   );
 };
+
+Speaker.propTypes = {
+  data: PropTypes.object,
+  navigation: PropTypes.object,
+  
+}
+
 export default Speaker;

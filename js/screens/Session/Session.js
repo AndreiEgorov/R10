@@ -13,6 +13,7 @@ import Icon from "react-native-vector-icons/Ionicons";
 import styles from "./styles";
 import moment from "moment";
 import LinearGradient from "react-native-linear-gradient";
+import PropTypes from 'prop-types'
 
 const Session = ({ data, navigation, context }) => {
   const allFaves = [];
@@ -98,5 +99,11 @@ const Session = ({ data, navigation, context }) => {
     </View>
   );
 };
+
+Session.propTypes = {
+  data: PropTypes.object,
+  navigation: PropTypes.object,
+  context: PropTypes.object
+}
 
 export default Session;

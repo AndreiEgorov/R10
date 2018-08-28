@@ -4,6 +4,7 @@ import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import { Text, View } from "react-native";
 
+
 export default class AboutContainer extends Component {
   static navigationOptions = {
     title: "About"
@@ -30,3 +31,5 @@ export default class AboutContainer extends Component {
     );
   }
 }
+
+

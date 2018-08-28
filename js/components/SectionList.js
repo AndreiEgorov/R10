@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import moment from "moment";
 import Icon from "react-native-vector-icons/Ionicons";
+import PropTypes from 'prop-types'
 
 const SectionLists = ({ data, navigation, context }) => {
   const allFaves = [];
@@ -55,6 +56,15 @@ const SectionLists = ({ data, navigation, context }) => {
     />
   );
 };
+
+
+
+SectionList.propTypes = {
+  data: PropTypes.array,
+  navigation: PropTypes.object,
+  context: PropTypes.object
+}
+
 
 const styles = StyleSheet.create({
   eventContainer: {

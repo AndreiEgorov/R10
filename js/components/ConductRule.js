@@ -18,7 +18,7 @@ class ConductRule extends Component {
       this.state.opacity, // The animated value to drive
       {
         toValue: this.state.isShown ? 0 : 1, // Animate to opacity: 1 (opaque)
-        duration: 1000 // Make it take a while
+        duration: 5000 // Make it take a while
       }
     ).start();
   }

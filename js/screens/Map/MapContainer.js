@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
-
+import { View } from 'react-native'
+import Map from './Map'
 export default class MapContainer extends Component {
   static navigationOptions = {
     title: "Map",
@@ -14,9 +14,9 @@ export default class MapContainer extends Component {
   };
   render() {
     return (
-      <View>
-        <Text> Im a MapContainer </Text>
-      </View>
+   
+        <Map/>
+ 
     )
   }
 }

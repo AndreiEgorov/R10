@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text } from "react-native";
+import { Text, ActivityIndicator } from "react-native";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import Schedule from "./Schedule";
@@ -25,7 +25,7 @@ export default class ScheduleContainer extends Component {
         `}
       >
         {({ loading, error, data }) => {
-          if (loading) return <Text>Loading...</Text>;
+          if (loading) return <ActivityIndicator size="large" color="#9963ea"/>;
           if (error) return <Text>Error: </Text>;
 
           return (

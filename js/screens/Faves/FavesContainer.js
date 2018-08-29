@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text } from "react-native";
+import { Text, ActivityIndicator } from "react-native";
 import Faves from "./Faves";
 
 import FavesContext from "../../context/FavesContext";
@@ -34,7 +34,7 @@ export default class FavesContainer extends Component {
         `}
       >
         {({ loading, error, data }) => {
-          if (loading) return <Text>Loading...</Text>;
+          if (loading) return<ActivityIndicator size="large" color="#9963ea"/>;
           if (error) return <Text>Error: </Text>;
 
           return (

@@ -3,7 +3,7 @@ import {
   View,
   Text,
   Image,
-  TouchableHighlight,
+  TouchableOpacity,
   Linking,
   ScrollView,
 } from "react-native";
@@ -41,7 +41,7 @@ const Speaker = ({ data, navigation }) => {
           <Text style={styles.name}>{data.Speaker.name}</Text>
           <Text style={styles.bio}>{data.Speaker.bio}</Text>
 
-          <TouchableHighlight
+          <TouchableOpacity
             style={styles.button}
             onPress={() => handleClick()}
           >
@@ -53,7 +53,7 @@ const Speaker = ({ data, navigation }) => {
             >
               <Text style={styles.buttonText}> Read More on Wikipedia</Text>
             </LinearGradient>
-          </TouchableHighlight>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </View>

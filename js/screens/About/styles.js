@@ -7,7 +7,8 @@ const styles = StyleSheet.create({
     backgroundColor: "white"
   },
 
-  divider:{
+  divider: {
+    marginTop: 10,
     borderBottomWidth: 1,
     borderBottomColor: "#e6e6e6"
   },
@@ -16,9 +17,7 @@ const styles = StyleSheet.create({
     height: 60,
     alignSelf: "center",
     marginTop: 40,
-    marginBottom: 40,
-   
-
+    marginBottom: 30
   },
 
   headings: {
@@ -38,11 +37,11 @@ const styles = StyleSheet.create({
     marginTop: 20,
     color: "black"
   },
-  notation:{
+  notation: {
     paddingVertical: 20,
     fontSize: 15,
-    color:"black",
-    fontFamily:"Montserrat-Light"
+    color: "black",
+    fontFamily: "Montserrat-Light"
   }
 });
 

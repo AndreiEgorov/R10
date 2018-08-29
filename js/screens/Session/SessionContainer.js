@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import Session from "./Session";
-import { View, Text } from "react-native";
+import { Text } from "react-native";
 import FavesContext from "../../context/FavesContext";
 
 class SessionContainer extends Component {

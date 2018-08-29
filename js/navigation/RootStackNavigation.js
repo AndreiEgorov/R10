@@ -1,5 +1,5 @@
 import { createStackNavigator } from "react-navigation";
-import About from "../screens/About";
+import About from "../screens/About"; //LEFT HERE ON PURPOSE
 import Map from "../screens/Map";
 import SpeakerModal from "./../screens/Speaker";
 import NavigationLayout from "./NavigationLayout";

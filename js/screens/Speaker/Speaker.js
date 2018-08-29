@@ -6,7 +6,6 @@ import {
   TouchableHighlight,
   Linking,
   ScrollView,
-  StyleSheet
 } from "react-native";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import styles from "./styles";

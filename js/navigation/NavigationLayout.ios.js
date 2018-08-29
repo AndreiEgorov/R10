@@ -46,6 +46,9 @@ const FavesStack = createStackNavigator(
   {
     Faves: {
       screen: Faves
+    },
+    Session: {
+      screen: Session
     }
   },
   {

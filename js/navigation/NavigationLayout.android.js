@@ -19,12 +19,11 @@ const ScheduleStack = createStackNavigator(
       screen: Session
     }
   },
-  
+
   {
     navigationOptions: ({ navigation }) => ({
       ...sharedNavigationOptions(navigation)
-    }),
-   
+    })
   }
 );
 
@@ -71,8 +70,6 @@ const AboutStack = createStackNavigator(
   }
 );
 
-
-
 const renderIcon = (iconName, tintColor) => {
   return <Ionicons name={iconName} size={25} color={tintColor} />;
 };
@@ -92,19 +89,16 @@ AboutStack.navigationOptions = {
   drawerIcon: ({ tintColor }) => renderIcon("md-information-circle", tintColor)
 };
 
-
-
 export default createDrawerNavigator(
-  { 
+  {
     Schedule: ScheduleStack,
     Map: MapStack,
     Faves: FavesStack,
     About: AboutStack
   },
   {
-    contentOptions:{
+    contentOptions: {
       activeTintColor: "#9963ea"
     }
-  },
-  
+  }
 );

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, TouchableOpacity, Text, Animated } from "react-native";
-import styles from "./../screens/About/styles";
-import PropTypes from 'prop-types'
+import styles from "./../../screens/About/styles";
+import PropTypes from "prop-types";
 class ConductRule extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +18,7 @@ class ConductRule extends Component {
       this.state.opacity, // The animated value to drive
       {
         toValue: this.state.isShown ? 0 : 1, // Animate to opacity: 1 (opaque)
-        duration: 5000 // Make it take a while
+        duration: 2000 // Make it take a while
       }
     ).start();
   }
@@ -53,13 +53,12 @@ class ConductRule extends Component {
       </View>
     );
   }
-  
 }
-ConductRule.propTypes= {
+ConductRule.propTypes = {
   object: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string
   })
-}
+};
 
 export default ConductRule;

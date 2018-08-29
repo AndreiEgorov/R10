@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { View, Text } from "react-native";
-import SectionLists from "./../../components/SectionList";
-import PropTypes from 'prop-types'
+import React from "react";
+import { View } from "react-native";
+import SectionLists from "./../../components/SectionList/SectionList";
+import PropTypes from "prop-types";
 
 const Faves = ({ data, navigation, context }) => {
   return (
@@ -13,10 +13,8 @@ const Faves = ({ data, navigation, context }) => {
 
 Faves.propTypes = {
   data: PropTypes.array,
-  navigation:PropTypes.object,
+  navigation: PropTypes.object,
   context: PropTypes.object
-}
-
+};
 
 export default Faves;
-

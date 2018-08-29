@@ -1,9 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   View,
   Text,
   Image,
-  TouchableHighlight,
   TouchableOpacity,
   StatusBar,
   Platform,
@@ -13,14 +12,12 @@ import Icon from "react-native-vector-icons/Ionicons";
 import styles from "./styles";
 import moment from "moment";
 import LinearGradient from "react-native-linear-gradient";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const Session = ({ data, navigation, context }) => {
   const allFaves = [];
   context.favesIds.map(item => allFaves.push(item.id));
   const faved = allFaves.includes(data.Session.id);
-  console.log(allFaves);
-
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" />
@@ -52,7 +49,7 @@ const Session = ({ data, navigation, context }) => {
         <Text style={styles.description}>{data.Session.description}</Text>
 
         <Text style={styles.intro}>Presented by:</Text>
-        <TouchableHighlight
+        <TouchableOpacity
           onPress={() =>
             navigation.navigate("MyModal", {
               speakerId: data.Session.speaker.id
@@ -72,7 +69,7 @@ const Session = ({ data, navigation, context }) => {
           ) : (
             <Text />
           )}
-        </TouchableHighlight>
+        </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.button}
@@ -104,6 +101,6 @@ Session.propTypes = {
   data: PropTypes.object,
   navigation: PropTypes.object,
   context: PropTypes.object
-}
+};
 
 export default Session;

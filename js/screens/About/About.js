@@ -2,18 +2,9 @@
 
 import React, { Component } from "react";
 import styles from "./styles";
-import {
-  Text,
-  View,
-  ScrollView,
-  Image,
-  StatusBar,
-  TouchableOpacity,
-  Animated,
-  Easing
-} from "react-native";
-import ConductRule from "./../../components/ConductRule";
-import PropTypes from "prop-types"
+import { Text, View, ScrollView, Image, StatusBar } from "react-native";
+import ConductRule from "./../../components/ConductRule/ConductRule";
+import PropTypes from "prop-types";
 class About extends Component {
   constructor(props) {
     super(props);
@@ -23,12 +14,12 @@ class About extends Component {
       <ScrollView>
         <View style={styles.container}>
           <StatusBar barStyle="light-content" />
-         
+
           <Image
             style={styles.image}
             source={require("./../../assets/r10_logox.png")}
           />
-           <View style={styles.divider}/>
+          <View style={styles.divider} />
           <Text style={styles.plainText}>
             R10 is a conference that focuses on just about any topic related to
             dev.
@@ -39,25 +30,21 @@ class About extends Component {
             Vancouver, BC.
           </Text>
           <Text style={styles.headings}>Code of Conduct</Text>
-          {console.log(this.props.data)}
           {this.props.data.allConducts.map((object, index) => {
             return <ConductRule object={object} key={index} />;
           })}
-          <View style={styles.divider}/>
-          <Text style={styles.notation}> 	© RED Academy 2018 </Text>
+          <View style={styles.divider} />
+          <Text style={styles.notation}> © RED Academy 2018 </Text>
         </View>
       </ScrollView>
     );
   }
 }
 
-
-
-
 About.propTypes = {
   data: PropTypes.shape({
     allConducts: PropTypes.arrayOf(PropTypes.object)
   })
-}
+};
 
 export default About;

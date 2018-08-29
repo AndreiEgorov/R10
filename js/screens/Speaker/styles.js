@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { auto } from "async";
+
 const styles = StyleSheet.create({
   screenContainer: {
     flex: 1,
